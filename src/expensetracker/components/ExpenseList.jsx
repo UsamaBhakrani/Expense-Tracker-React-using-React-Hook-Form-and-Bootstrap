@@ -1,4 +1,7 @@
 const ExpenseList = ({ expenses, onDelete }) => {
+  if (expenses.length === 0) {
+    return null;
+  }
   return (
     <div>
       <table className="table table-bordered">
