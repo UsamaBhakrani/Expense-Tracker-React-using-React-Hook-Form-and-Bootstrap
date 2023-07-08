@@ -1,52 +1,36 @@
 import { useForm } from "react-hook-form";
+import { categories } from "./App";
 
 const Form = () => {
   return (
-    <div>
-      <form action="submit">
-        <div className="d-flex flex-column ">
-          <label htmlFor="" className="text-dark">
-            Description
-          </label>
-          <input className="input-group" type="text" />
-          <label htmlFor="" className="text-dark">
-            Amount
-          </label>
-          <input type="text" />
-          <label htmlFor="" className="text-dark">
-            Category
-          </label>
-          <select
-            className="form-select"
-            id="inputGroupSelect03"
-            aria-label="Example select with button addon"
-          >
-            <option>All Categories</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
-          </select>
-
-          <div>
-            <button className="btn btn-primary" type="submit">
-              Submit
-            </button>
-          </div>
-        </div>
-      </form>
-      <div className="input-group">
-        <select
-          className="form-select"
-          id="inputGroupSelect03"
-          aria-label="Example select with button addon"
-        >
-          <option></option>
-          <option value="1">One</option>
-          <option value="2">Two</option>
-          <option value="3">Three</option>
-        </select>
+    <form action="">
+      <div className="mb-3">
+        <label htmlFor="description" className="form-label">
+          Description
+        </label>
+        <input id="description" type="text" className="form-control" />
       </div>
-    </div>
+      <div className="mb-3">
+        <label htmlFor="amount" className="form-label">
+          Amount
+        </label>
+        <input id="amount" type="number" className="form-control" />
+      </div>
+      <div className="mb-3">
+        <label htmlFor="category" className="form-label">
+          Category
+        </label>
+        <select className="form-select" id="category">
+          <option value=""></option>
+          {categories.map((category) => (
+            <option key={category} value={category}>
+              {category}
+            </option>
+          ))}
+        </select>
+        <button className="btn btn-primary m-3">Submit</button>
+      </div>
+    </form>
   );
 };
 
