@@ -14,15 +14,15 @@ const ExpenseList = ({ expenses, onDelete }) => {
           </tr>
         </thead>
         <tbody>
-          {expenses.map((expense) => (
-            <tr key={expense.id}>
-              <td>{expense.description}</td>
-              <td>{expense.amount}</td>
-              <td>{expense.category}</td>
+          {expenses.map(({ id, description, amount, category }) => (
+            <tr key={id}>
+              <td>{description}</td>
+              <td>{amount}</td>
+              <td>{category}</td>
               <td>
                 <button
                   className="btn btn-outline-danger"
-                  onClick={() => onDelete(expense.id)}
+                  onClick={() => onDelete(id)}
                 >
                   Delete
                 </button>

@@ -4,10 +4,10 @@ import ExpenseList from "./expensetracker/components/ExpenseList";
 
 const App = () => {
   const [expenses, setExpenses] = useState([
-    { id: 1, description: "aaa", amount: 10, category: "utilities" },
-    { id: 2, description: "aaa", amount: 10, category: "utilities" },
-    { id: 3, description: "aaa", amount: 10, category: "utilities" },
-    { id: 4, description: "aaa", amount: 10, category: "utilities" },
+    { id: 1, description: "Milk", amount: 10, category: "utilities" },
+    { id: 2, description: "Eggs", amount: 8, category: "utilities" },
+    { id: 3, description: "Bread", amount: 6, category: "utilities" },
+    { id: 4, description: "Yoghurt", amount: 5, category: "utilities" },
   ]);
 
   return (
