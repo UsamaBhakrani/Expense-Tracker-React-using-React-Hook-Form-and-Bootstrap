@@ -17,9 +17,13 @@ const App = () => {
     ? expenses.filter((e) => selectedCategory === e.category)
     : expenses;
 
+  const addExpense = (expense) => {
+    setExpenses([...expenses, { ...expense, id: expenses.length + 1 }]);
+  };
+
   return (
     <div className="mb-3">
-      <Form />
+      <Form onSubmit={(expense) => addExpense(expense)} />
       <div className="mb-3">
         <ExpenseFilter
           onSelectCategory={(category) => setSelectedCategory(category)}
