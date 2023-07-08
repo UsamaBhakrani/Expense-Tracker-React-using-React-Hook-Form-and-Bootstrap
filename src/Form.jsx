@@ -8,7 +8,7 @@ const Form = () => {
           <label htmlFor="" className="text-dark">
             Description
           </label>
-          <input className="input-group input-group-sm mb-3" type="text" />
+          <input className="input-group" type="text" />
           <label htmlFor="" className="text-dark">
             Amount
           </label>
@@ -16,7 +16,17 @@ const Form = () => {
           <label htmlFor="" className="text-dark">
             Category
           </label>
-          <input type="text" />
+          <select
+            className="form-select"
+            id="inputGroupSelect03"
+            aria-label="Example select with button addon"
+          >
+            <option>All Categories</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+
           <div>
             <button className="btn btn-primary" type="submit">
               Submit
@@ -24,13 +34,13 @@ const Form = () => {
           </div>
         </div>
       </form>
-      <div className="input-group mb-3">
+      <div className="input-group">
         <select
           className="form-select"
           id="inputGroupSelect03"
           aria-label="Example select with button addon"
         >
-          <option>Choose...</option>
+          <option></option>
           <option value="1">One</option>
           <option value="2">Two</option>
           <option value="3">Three</option>
